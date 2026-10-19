@@ -7,7 +7,7 @@ function Navbar() {
   const handleNavClick = (event) => {
     event.preventDefault();
     const targetId = event.currentTarget.getAttribute('href');
-    const targetSection = document.querySelector(targetId);
+    const targetSection = document.getElementById(targetId.slice(1));
 
     if (targetSection) {
       targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
